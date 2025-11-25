@@ -9,9 +9,6 @@ import javax.persistence.Entity;
 @Setter
 @Getter
 public class VisitanteResponsable extends Visitante {
-
     private String correo;
     private String telefono;
-
-
 }

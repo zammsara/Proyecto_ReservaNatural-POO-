@@ -29,20 +29,4 @@ public class Reserva extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name= "id_estadoReserva", referencedColumnName = "id")
     private EstadoReserva estadoReserva;
-
-//    public void iniciarPago() {
-//        this.estadoActual = EstadoReserva.PENDIENTE_PAGO;
-//    }
-//
-//    public void confirmarPago() {
-//        this.estadoActual = EstadoReserva.CONFIRMADA;
-//    }
-//
-//    public void cancelar() {
-//        this.estadoActual = EstadoReserva.CANCELADA;
-//    }
-//
-//    public void expirar() {
-//        this.estadoActual = EstadoReserva.EXPIRADA;
-//    }
 }

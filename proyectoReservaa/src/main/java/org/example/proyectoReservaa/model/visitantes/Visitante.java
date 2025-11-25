@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public abstract class Visitante extends BaseEntity {
 
     private String nombreCompleto;
+    @Enumerated(EnumType.STRING)
     private TipoDocumento tipoDocumento;
     private String documentoIdentidad;
     private LocalDate fechaNacimiento;
