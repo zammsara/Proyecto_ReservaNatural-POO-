@@ -1,0 +1,56 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE application SYSTEM "dtds/application.dtd">
+
+<application name="proyectoReservaa"> 
+	
+	<!-- 
+	A default module for each entity is assumed with the
+	controllers on <default-module/>
+	-->
+	<default-module>		  
+		<controller name="Typical"/>		
+	</default-module>
+	
+	<!-- Modulos con controladores especificos -->
+	<module name="Reserva">
+		<model name="Reserva"/>
+		<controller name="Reserva"/>
+	</module>
+
+	<module name="HorarioDiario">
+		<model name="HorarioDiario"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="HorarioReserva">
+		<model name="HorarioReserva"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="TipoVisitante">
+		<model name="TipoVisitante"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="DescuentoDiario">
+		<model name="DescuentoDiario"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="Pago">
+		<model name="Pago"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="Reembolso">
+		<model name="Reembolso"/>
+		<controller name="Typical"/>
+	</module>
+
+	<module name="EstacionamientoReserva">
+		<model name="EstacionamientoReserva"/>
+		<controller name="Typical"/>
+	</module>
+	
+</application>

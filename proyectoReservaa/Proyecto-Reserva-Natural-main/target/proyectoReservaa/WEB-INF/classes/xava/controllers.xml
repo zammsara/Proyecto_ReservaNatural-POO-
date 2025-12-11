@@ -1,0 +1,38 @@
+﻿<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controllers SYSTEM "dtds/controllers.dtd">
+
+<!-- 
+Controllers doc: 
+https://www.openxava.org/OpenXavaDoc/docs/controllers_en.html
+
+Default controllers included in OpenXava (you can extend from them):
+https://github.com/openxava/openxava/blob/master/openxava/src/main/resources/xava/default-controllers.xml
+ 
+Examples of controllers (from test application):
+https://github.com/openxava/openxava/blob/master/openxavatest/src/main/resources/xava/controllers.xml
+-->
+
+<controllers>
+    
+    <!-- Environment variable:
+    <env-var name="proyectoReservaa_DEFAULT_YEAR" value="2015"/> 
+    -->
+    
+    <!-- Session object:
+    <object name="proyectoReservaa_activeYear" class="java.lang.Integer" value="2015" 
+    	    scope="global"/>    
+    -->
+
+    <!-- Controlador de reservas con acciones de negocio -->
+    <controller name="Reserva">
+        <extends controller="Typical"/>
+        <action name="crearPendiente" class="org.example.proyectoReservaa.actions.ReservaCrearPendienteAction" icon="hourglass-start"/>
+        <action name="confirmarPago" class="org.example.proyectoReservaa.actions.ReservaConfirmarPagoAction" icon="check"/>
+        <action name="cancelarReserva" class="org.example.proyectoReservaa.actions.ReservaCancelarAction" icon="close"/>
+        <action name="expirar" class="org.example.proyectoReservaa.actions.ReservaExpirarAction" icon="clock-outline"/>
+        <action name="checkIn" class="org.example.proyectoReservaa.actions.ReservaCheckInAction" icon="login"/>
+        <action name="noAsistida" class="org.example.proyectoReservaa.actions.ReservaNoAsistidaAction" icon="account-off"/>
+    </controller>
+    
+</controllers>
