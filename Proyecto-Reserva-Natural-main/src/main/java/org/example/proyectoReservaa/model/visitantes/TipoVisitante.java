@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.proyectoReservaa.model.BaseEntity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.math.BigDecimal;
 
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
 @Setter
 @Getter
 public class TipoVisitante extends BaseEntity {
+    @Column(unique = true)
     private String nombre;
     private BigDecimal precioEntrada;
-    private BigDecimal descuentoTipo;
 }

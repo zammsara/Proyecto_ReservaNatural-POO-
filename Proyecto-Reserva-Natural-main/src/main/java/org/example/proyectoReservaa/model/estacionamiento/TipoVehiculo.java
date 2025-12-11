@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Setter
 public class TipoVehiculo extends BaseEntity {
 
-    @Column
+    @Column(unique = true)
     private String nombreTipoVehiculo;
 
     @Column(precision = 5, scale = 2)

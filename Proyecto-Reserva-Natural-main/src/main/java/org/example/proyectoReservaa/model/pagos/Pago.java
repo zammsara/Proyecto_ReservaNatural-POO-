@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.proyectoReservaa.model.BaseEntity;
 import org.example.proyectoReservaa.model.reservas.Reserva;
+import org.openxava.annotations.DescriptionsList;
+import org.openxava.annotations.View;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +33,8 @@ public class Pago extends BaseEntity {
     private EstadoPago estado = EstadoPago.PENDIENTE;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_reserva", referencedColumnName = "id")
+    @JoinColumn(name = "id_reserva")
+    @DescriptionsList(descriptionProperties = "codigoReserva")
     private Reserva reserva;
 
     public void aprobar(String codigoTransaccion) {
